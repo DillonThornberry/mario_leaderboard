@@ -16,7 +16,7 @@ var players = {
     },
     smithjrblaqualuigi: {
         name: "SmithJrBlaquaLuigi",
-        time: "16:57",
+        time: "17:59",
         url: "https://www.twitch.tv/smithjrblaqualuigi"
     },
     louisspog: {
