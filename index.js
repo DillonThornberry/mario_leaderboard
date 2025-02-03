@@ -1,4 +1,7 @@
 var timeInSeconds = time => {
+    if (time === "") {
+        return 99999999;
+    }
     var timeArray = time.split(":");
     return parseInt(timeArray[0]) * 60 + parseInt(timeArray[1]);
 }
@@ -26,7 +29,7 @@ var players = {
     },
     t0nybasil: {
         name: "T0NYBASIL",
-        time: "17:02",
+        time: "",
         url: "https://www.twitch.tv/t0nybasil"
     },
     yardmeat: {
