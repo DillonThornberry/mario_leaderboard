@@ -14,13 +14,15 @@ var players = {
     },
     nation_live: {
         name: "nation_live",
-        time: "17:27",
-        url: "https://www.twitch.tv/nation_live"
+        time: "17:31",
+        url: "https://www.twitch.tv/nation_live",
+        pb_url: "https://www.youtube.com/watch?v=CfLqCFijMLg"
     },
     smithjrblaqualuigi: {
         name: "SmithJrBlaquaLuigi",
         time: "17:59",
-        url: "https://www.twitch.tv/smithjrblaqualuigi"
+        url: "https://www.twitch.tv/smithjrblaqualuigi",
+        pb_url: "https://www.twitch.tv/videos/572520587"
     },
     louisspog: {
         name: "louissPog",
@@ -35,12 +37,14 @@ var players = {
     yardmeat: {
         name: "YardMeat",
         time: "18:12",
-        url: "https://www.twitch.tv/yardmeat"
+        url: "https://www.twitch.tv/yardmeat",
+        pb_url: "https://www.twitch.tv/videos/2370685308"
     },
     dubbskii: {
         name: "dubbskii",
         time: "17:07",
-        url: "https://www.twitch.tv/dubbskii"
+        url: "https://www.twitch.tv/dubbskii",
+        pb_url: "https://www.twitch.tv/videos/2354640284"
     },
     milk: {
         name: "Milk",
@@ -55,17 +59,20 @@ var players = {
     ajames_30: {
         name: "aJames_30",
         time: "18:07",
-        url: "https://www.twitch.tv/ajames_30"
+        url: "https://www.twitch.tv/ajames_30",
+        pb_url: "https://www.twitch.tv/videos/2194676691"
     },
     nascar_316: {
         name: "Nascar_316",
         time: "18:51",
-        url: "https://www.twitch.tv/nascar_316"
+        url: "https://www.twitch.tv/nascar_316",
+        pb_url: "https://www.twitch.tv/videos/1563678869"
     },
     pignickel: {
         name: "Pignickel",
         time: "17:47",
-        url: ""
+        url: "https://www.twitch.tv/Pignickel",
+        pb_url: "https://www.youtube.com/watch?v=R2dnmV6lCR8"
     },
     sliazx: {
         name: "Sliazx",
@@ -80,7 +87,8 @@ var players = {
     americanape: {
         name: "AmericanApe",
         time: "17:48",
-        url: "https://www.twitch.tv/americanape"
+        url: "https://www.twitch.tv/americanape",
+        pb_url: "https://www.twitch.tv/videos/2367532449"
     },
 }
 
@@ -97,9 +105,14 @@ for (var i = 0; i < sortedPlayers.length; i++) {
     // Wrap player name with link to their twitch
     var name = players[sortedPlayers[i]].name;
     if (players[sortedPlayers[i]].url) {
-        name = "<a href='" + players[sortedPlayers[i]].url + "'>" + name + "</a>";
+        name = "<a target='blank' href='" + players[sortedPlayers[i]].url + "'>" + name + "</a>";
     }
-    table += "<tr><td>" + (i + 1) + "</td><td>" + name + "</td><td>" + players[sortedPlayers[i]].time + "</td></tr>";
+
+    var time = players[sortedPlayers[i]].time;
+    if (players[sortedPlayers[i]].pb_url) {
+        time = "<a target='blank' href='" + players[sortedPlayers[i]].pb_url + "'>" + time + "</a>";
+    }
+    table += "<tr><td>" + (i + 1) + "</td><td>" + name + "</td><td>" + time + "</td></tr>";
     
 }
 table += "</table>";
