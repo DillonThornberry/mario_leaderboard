@@ -9,6 +9,18 @@ body {
     align-items: center;
 }
 
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Match the color of surrounding text */
+    font: inherit; /* Match the font style and size */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+a:hover, a:focus {
+    color: #ff0000; /* Change to Mario's red when highlighted */
+}
+
 /* Header image styling */
 header {
     width: 100%;
