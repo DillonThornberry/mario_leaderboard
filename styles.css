@@ -1,0 +1,107 @@
+/* Base styles */
+body {
+    font-family: "Comic Sans MS", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* Sky blue for the Mario vibe */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header image styling */
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    /*background-color: #ff0000; /* Mario's red */
+    padding: 10px 0;
+}
+
+#mario {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image fits within the container */
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Table container */
+#leaderboard {
+    margin: 10px auto;
+    width: 90%;
+    max-width: 800px;
+    overflow-x: auto;
+    background: #ff0000; /* Bright yellow background */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 3px solid #000; /* Black outline */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 2px solid #000; /* Black border for cells */
+    color: #000; /* Text color */
+}
+
+thead th {
+    background-color: #ff0000; /* Mario's red */
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff; /* Bright green for pipes */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff; /* White rows */
+}
+
+tbody tr:hover {
+    background-color: #fff; /* Water blue for hover effect */
+}
+
+/* Responsive table styling */
+@media (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #000;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        border: 0;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+}
