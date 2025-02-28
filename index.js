@@ -13,8 +13,8 @@ var players = {
         url: "https://www.twitch.tv/sixsix229"
     },
     nation_live: {
-        name: "nation_live",
-        time: "17:31",
+        name: "Nation_LIVE",
+        time: "17:26",
         url: "https://www.twitch.tv/nation_live",
         pb_url: "https://www.youtube.com/watch?v=CfLqCFijMLg"
     },
@@ -79,9 +79,9 @@ var players = {
         time: "17:00",
         url: ""
     },
-    shkurd: {
-        name: "shkurd",
-        time: "19:16",
+    tsrstormed: {
+        name: "TSRStormed",
+        time: "20:29",
         url: "https://www.twitch.tv/shkurd"
     },
     americanape: {
