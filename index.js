@@ -82,7 +82,7 @@ var players = {
     tsrstormed: {
         name: "TSRStormed",
         time: "20:29",
-        url: "https://www.twitch.tv/shkurd"
+        url: "https://www.twitch.tv/tsrstormed",
     },
     americanape: {
         name: "AmericanApe",
